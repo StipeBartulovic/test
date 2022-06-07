@@ -1,0 +1,412 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body{
+    
+    font-family: Oswald;
+    font-size: 24px;
+    background-color: black;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    margin:0 auto;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0 auto;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+#navCont{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 0%;
+    height: 100vh;
+    padding-top: 5vh;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left:0;
+}
+
+#navCont:hover{
+    width: 15%;
+    margin-right: -5%;
+}
+
+#navCont img{
+    width: 50%;
+    margin: 30px 0;
+}
+
+#Cont{
+    flex-direction: column;
+    padding-top: 5vh;
+    display: flex;
+    width:100%;
+    text-align: center;
+    justify-content: center;
+    z-index: 1;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+nav{
+    width: 100%;
+    color: #222;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+#x{
+    width: 40%;
+    margin: 5vh auto;
+}
+
+#nevidljivo{
+    visibility: hidden;
+}
+
+a:link { text-decoration: none; color: #222; }
+
+a:visited { text-decoration: none; color: #222;}
+
+a:hover { text-decoration: none; color: #222;}
+
+a:active { text-decoration: none; color: #222;}
+
+li{
+    opacity: 0.5;
+    text-align: center;
+    padding: 5px 0;
+    margin: 5px 0;
+    transition: 0.25s;
+}
+
+li:hover{
+    background-color: #DDD;
+    color: black;
+    opacity: 1;
+    font-size: 28px;
+    padding: 5px 0;
+}
+
+#vid{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: brightness(30%);
+}
+
+pre{
+    color: white;
+    font-size: 120px;
+    margin: 0 auto;
+    margin-top: 30vh;
+    font-family:Oswald;
+}
+
+section{
+    padding: 70px 0;
+}
+
+#naslov{
+    height: 90vh;
+    border-style: none;
+    padding: 0;
+    height:95vh;
+}
+
+#strelica{
+    width: 2%;
+    position: fixed;
+    top: 5vh;
+    left: 1%;
+    transition: 0.5s;
+}
+
+#podnaslov{
+    margin-top: -20px;
+    font-weight: 100;
+    font-size: 36px;
+}
+
+
+#galerija{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #282828;
+}
+
+#kontakt{
+    background-color: #333;
+}
+
+#kontCont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    align-items: center;
+}
+
+#o{
+    background-color: #333;
+}
+
+#javiSe{
+    background-color: white;
+    padding: 0 5px 5px 5px;
+    transition: 0.1s;
+}
+
+#javiSe:hover{
+    background-color: #DDD;
+}
+
+footer{
+    display: flex;;
+    width: 100%;
+    height: 100px;
+    background-color: #222;
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+}
+
+.secNas{
+    border-bottom: solid 1px white;
+    color: white;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.galCont{
+    display: flex;
+    justify-content: center;
+    padding: 100px 10%;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    width: 25%;
+    height: 300px;
+    margin: 2%;
+    transition: 0.2s;
+}
+
+.item:hover{
+    transform: scale(1.3);
+}
+
+.item img{
+    width: 100%;
+    border: 1px solid white;
+}
+
+.gumb{
+    background-color: white;
+    color: black;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    transition: 0.25s;
+    border-style: none;
+}
+
+.gumb:hover{
+    background-color: black;
+    color: white;
+}
+
+#info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+#info img{
+    width: 100%;
+    border: 1px solid white;
+}
+
+.infoTekst{
+    margin-left: 5%;
+    width:33%;
+    margin: 15px;
+    text-align: left;
+    font-size: 30px;
+}
+
+.infoSlika{
+    width:20%;
+    padding-right: 2%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.input{
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    border: 1px white solid;
+    background-color: #333;
+    transition: 0.15s;
+    user-select: auto;
+}
+
+.input:focus{
+    outline: none !important;
+    border-left:5px solid ;
+    border-right:5px solid ;
+    background-color: #222;
+}
+
+#posalji{
+    margin-top: 10px;
+    width: 97%;
+    font-size: 20px;
+}
+
+#poruka{
+    height:280px;
+}
+
+iframe{
+    width: 30%;
+    height: 500px;
+    margin-left:5% ;
+}
+
+#insta{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0.4;
+    transition: 0.2s;
+    margin-left: 5%;
+    width: 3%;
+}
+
+#insta:hover{
+    opacity: 1;
+}
+
+.fa-instagram {
+    color: white;
+  }
+
+#instaTekst{
+    margin-left: 10%;
+}
+
+@media only screen and (max-width: 1600px) {
+    .infoSlika{
+        width: 40%;
+    }
+    .item{
+        width: 30%;
+    }
+    
+}
+
+@media only screen and (max-width: 1200px) {
+    #info{
+        flex-direction: column;
+    }
+    .infoTekst{
+        width: 70%;
+    }
+    .galCont{
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 30px;
+    }
+    .item{
+        width: 70%;
+        margin:0 auto 30px;
+        height:auto;
+    }
+
+    .item img{
+        width: 100%;
+    }
+
+    .item:hover{
+        transform: scale(1.05);
+    }
+    form, iframe{
+        width: 40%;
+    }
+    #strelica{
+        width:6%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #kontCont{
+        flex-direction: column;
+    }
+    iframe{
+        margin: 30px auto;
+    }
+    form, iframe{
+        width: 80%;
+    }
+    .item{
+        width: 90%;
+        margin:20px auto;
+        height: auto;
+    }
+    #galCont{
+        padding-top: 100px;
+    }
+    .infoSlika{
+        width: 70%;
+    }
+    pre{
+        font-size: 80px;
+    }
+    #strelica{
+        width:8%;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    pre{
+        font-size: 60px;
+    }
+    #podnaslov{
+        font-size: 36px;
+    }
+}
+

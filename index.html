@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleSheets/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+<script type="text/javascript" src="meni.js"></script>
+    <title>GALANTAN</title>
+    <link rel="shortcut icon" type="image/png" href="img/G-white.png"/>
+</head>
+<body>
+    <script src="https://maps.google.com/maps/api/js?sensor=false"></script> 
+    <main>
+        <video src="video/GALANTAN.mp4" id="vid" autoplay muted loop></video>
+        <div id="navCont">
+            <img src="img/G.png" alt="G">
+            <nav id="nevidljivo">
+                <ul>
+                    <a href="#naslov" onclick="zatvoriMeni()"><li>Naslov</li></a>
+                    <a href="#o" onclick="zatvoriMeni()"><li>O Meni</li></a>
+                    <a href="#galerija"onclick="zatvoriMeni()"><li>Galerija</li></a>
+                    <a href="#kontakt"onclick="zatvoriMeni()"><li>Kontakt</li></a>
+                    <li onclick="zatvoriMeni()" id="x">X</li>
+
+                </ul>
+            </nav>
+        </div>
+        <div id="Cont">
+            <img src="img/arrow-24-xxl.png" alt="strelica" id="strelica" onclick="otvoriMeni()">
+            <section id="naslov">
+                <pre>G A L A N T A N</pre>
+                <p id="podnaslov">DUBINSKO ČIŠĆENJE</p>
+            </section>
+            <section id="o">
+                <div class="secNas">
+                    <h2>O MENI</h2>
+                </div>
+                <div id="info">
+                    <div class="infoSlika">
+                        <img src="img/quad.jpg" alt="ante">
+                    </div>
+                    <div class="infoTekst">
+                    <p>Mladi entuzijast koji je odlučio svoj prijašnji usputni i amaterski posao podignuti na višu razinu.
+                        Nudim ozbiljan i predan rad u dubinskom čišćenu automobila ili drugih prevoznih sredstava.
+                        Odličan način da vaš automobil pripremite za posebne prigode, za prodaju ili pak za vlasiti užitak.
+                        Ukoliko želite da vaš automobil izgleda što sličnije tvorničkom orginalu <a href="#kontakt" id="javiSe"> javite nam se</a> </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="galerija">
+                <div class="secNas">
+                    <h2>GALERIJA</h2>
+                </div>
+                <div class="galCont">
+                    <div class="item" id="i1">
+                        <img src="img/prva.jpg" alt="prva">
+                    </div>
+                    <div class="item"  id="i2">
+                        <img src="img/druga.jpg" alt="druga">
+                    </div>
+                    <div class="item"  id="i3">
+                        <img src="img/treca.jpg" alt="treca">
+                    </div>
+                </div>
+                <a href="galerija.html"><div class="gumb">
+                    VIŠE
+                </div></a>
+            </section>
+            <section id="kontakt">
+                <div class="secNas">
+                    <h2>KONTAKT</h2>
+                </div>
+                <div id="kontCont">
+                     <form onsubmit="sendEmail();_reset();" id="forma">
+                        <input type="subject" placeholder="ime i prezime" class="input" id="ime" required>
+                        <input type="email" placeholder="e-mail" class="input" id="email" required>
+                        <input type="text" name="phone" placeholder="broj" class="input" id="phone">
+                        <textarea name="poruka" id="poruka" placeholder="poruka" class="input"></textarea>
+                        <button type="submit" class="gumb">Pošalji</button>
+                    </form>
+
+                    <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=43.487932,%2016.832370&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+            </section>
+            <footer>
+                <a href="https://www.instagram.com/gale_ante/" id="insta">
+                    <div class="fa fa-instagram"></div>
+                    <p id="instaTekst">GALANTE</p>
+                </a>
+            </footer>
+            
+        </div>
+        
+    </main>
+    <script type="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        $("forma").submit(function(e) {
+            e.preventDefault();
+        });
+        function sendEmail(){
+        alert("Poruka je uspjesno poslana.");
+        Email.send({
+             Host : "smtp.gmail.com",
+             Username : "stipe331@gmail.com",
+             Password : "Kkiikkii21254",
+             To : 'stipebarti@gmail.com',
+             From : document.getElementById("email").value,
+             Subject : "This is the subject",
+             Body : "Ime:" + document.getElementById("ime").value + "<br> Email:" + document.getElementById("email").value +"<br> Broj:" +
+             document.getElementById("broj").value + "<br> Poruka:" +
+             document.getElementById("poruka").value
+        });
+        document.getElementById("uspjeh").style.fontSize = "30px";
+    }
+    </script>
+</body>
+</html>
